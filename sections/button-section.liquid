@@ -1,0 +1,83 @@
+<div id="section-cta">
+  <div class="container">
+    <a href="{{ section.settings.link }}" style="background-color: {{ section.settings.color_button }}" class="btn btn--cta {{ section.settings.button_size }}
+    {% if section.settings.button_size == "1" %}btn-small{% endif %}
+    {% if section.settings.button_size == "2" %}btn-medium{% endif %}
+    {% if section.settings.button_size == "3" %}btn-large{% endif %}">{{ section.settings.linktext }}</a>
+  </div>
+</div>
+
+<style>
+.btn-small {
+    height: 30px;
+    width: 150px;
+}
+
+.btn-medium {
+    height: 50px;
+    width: 250px;
+}
+
+.btn-large {
+    height: 70px;
+    width: 350px;
+}
+
+</style>
+{% schema %}
+{
+  "name": "Call to action",
+  "settings": [
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click here"
+    },
+    {
+        "id": "color_button",
+        "type": "color",
+        "label": "Button color",
+        "default": "#333333"
+    },
+    {
+        "id": "button_size",
+        "type": "select",
+        "label": "Taille",
+        "default": "2",
+        "options": [
+          {
+            "label": "Petit",
+            "value": "1"
+          },
+          {
+            "label": "Moyen",
+            "value": "2"
+          },
+          {
+            "label": "Grand",
+            "value": "3"
+          }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action",
+      "category": "CTA button"
+    }
+  ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
