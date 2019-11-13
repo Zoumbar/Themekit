@@ -1,0 +1,6 @@
+development:
+  password: 
+  theme_id: "79492251726"
+  store: ouvre-esteban.myshopify.com
+  ignore_files:
+  - config/settings_data.json
