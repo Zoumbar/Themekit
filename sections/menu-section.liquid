@@ -1,0 +1,40 @@
+<style>
+    
+</style>
+
+<div>
+    <img src="{{ section.settings.menu-img.src }}" alt="">
+    <ul>
+        {% for link in linklists[section.settings.custom_link_list].links %}
+            <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% schema %}
+    {
+    "name": "menu-section",
+    "settings": [
+    {
+    "type": "link_list",
+    "id": "custom_link_list",
+    "label": "Menu",
+    "info": "Custom menu by me"
+    },
+    {
+    "type": "image_picker",
+    "id": "menu-img",
+    "label": "Image du menu"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Menu custom",
+    "category": "IIM COURS"
+    }
+    ]
+    }
+{% endschema %}
