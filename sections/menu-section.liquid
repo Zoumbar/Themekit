@@ -2,8 +2,8 @@
     
 </style>
 
-<div>
-    <img src="{{ section.settings.menu-img.src }}" alt="">
+<div style="display: block; text-align: center;">
+    <img src="{{ section.settings.menu-img.src | img_url: '400x400'}}" alt="img">
     <ul>
         {% for link in linklists[section.settings.custom_link_list].links %}
             <li>
@@ -22,7 +22,7 @@
     "type": "link_list",
     "id": "custom_link_list",
     "label": "Menu",
-    "info": "Custom menu by me"
+    "info": "Custom menu "
     },
     {
     "type": "image_picker",
@@ -32,8 +32,8 @@
     ],
     "presets": [
     {
-    "name": "Menu custom",
-    "category": "IIM COURS"
+    "name": "Custom menu",
+    "category": "IIM shopify"
     }
     ]
     }
